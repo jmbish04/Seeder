@@ -367,7 +367,7 @@ Both prior verification gaps are now closed; the only thing not re-checked here 
 
 
 
-- **Env:** `MCP_ALLOWED_ORIGINS` (document in `wrangler.jsonc`, `cloudflare-env.d.ts` via `npm run cf-typegen`, and `.dev.vars`/README).
+- **Env:** `MCP_ALLOWED_ORIGINS` (document in `wrangler.jsonc`, generated `worker-configuration.d.ts` via `npm run types`, and `.dev.vars`/README).
 - **Docs (the self-host hook):** README section with a per-fork connection snippet using the fork's own domain —
   ```json
   { "mcpServers": { "seeder": { "url": "https://pm.yourfork.com/api/mcp", "headers": { "Authorization": "Bearer seed_pat_…" } } } }
@@ -426,7 +426,7 @@ Both prior verification gaps are now closed; the only thing not re-checked here 
 - `lib/db/schema.ts` — `apiKey` table
 - `app/api/workspace/route.ts` — delegate action blocks to `lib/services`
 - `lib/actions.ts`, `lib/daily.ts` — lift mutation cores into `lib/services`
-- `wrangler.jsonc` / `cloudflare-env.d.ts` — `MCP_ALLOWED_ORIGINS`
+- `wrangler.jsonc` / generated `worker-configuration.d.ts` — `MCP_ALLOWED_ORIGINS`
 - `README.md`, `AGENTS.md`/`CLAUDE.md` — connection docs
 
 ---

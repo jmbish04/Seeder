@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
   "name": "seeder",
-  "compatibility_date": "2026-04-30",
+  "compatibility_date": "2026-07-27",
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
   "observability": {
@@ -27,8 +27,8 @@
     {
       "binding": "PM_DB",
       "database_name": "seeder",
-      "database_id": "b9596b56-bb58-41be-bcf1-17e30426ec29",
-      "preview_database_id": "b9596b56-bb58-41be-bcf1-17e30426ec29",
+      "database_id": "7011d396-4668-401a-9f33-2a5eee3d7faa",
+      "preview_database_id": "7011d396-4668-401a-9f33-2a5eee3d7faa",
       "migrations_dir": "migrations"
     }
   ],

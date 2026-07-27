@@ -96,8 +96,15 @@ export function SignInPanel({
       });
 
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        setErrorMessage(data.error ?? "Unable to accept invitation.");
+        const data: unknown = await response.json().catch(() => null);
+        const error =
+          typeof data === "object" &&
+          data !== null &&
+          "error" in data &&
+          typeof data.error === "string"
+            ? data.error
+            : "Unable to accept invitation.";
+        setErrorMessage(error);
         return;
       }
 

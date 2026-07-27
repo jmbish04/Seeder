@@ -13,13 +13,13 @@
   // KEEP IN SYNC with wrangler.jsonc: this must mirror its bindings, differing
   // only by the added "remote": true on the D1/R2 entries.
   "name": "seeder",
-  "compatibility_date": "2026-04-30",
+  "compatibility_date": "2026-07-27",
   "compatibility_flags": ["nodejs_compat"],
   "d1_databases": [
     {
       "binding": "PM_DB",
       "database_name": "seeder",
-      "database_id": "b9596b56-bb58-41be-bcf1-17e30426ec29",
+      "database_id": "7011d396-4668-401a-9f33-2a5eee3d7faa",
       "migrations_dir": "migrations",
       "remote": true
     }
