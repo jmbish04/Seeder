@@ -18,6 +18,8 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - name: Check Wrangler types
+        run: npm run types:check
       - name: Lint
         run: npm run lint
       - name: Typecheck

@@ -17,6 +17,7 @@ See the [README](README.md) for full local D1/R2 setup and deployment steps.
 ## Before you open a PR
 
 ```bash
+npm run types:check # worker-configuration.d.ts matches wrangler.jsonc
 npm run lint        # ESLint
 npx tsc --noEmit    # type-check
 npm test            # unit tests (Vitest)

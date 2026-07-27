@@ -2,10 +2,15 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
+const reactHooks = nextVitals[0].plugins["react-hooks"];
+
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
+    plugins: {
+      "react-hooks": reactHooks,
+    },
     rules: {
       // The new react-hooks `set-state-in-effect` rule fires on several
       // legitimate, pre-existing patterns across the UI (mount flags, syncing
@@ -26,6 +31,7 @@ const eslintConfig = defineConfig([
     // Generated deployment/build artifacts:
     ".open-next/**",
     ".wrangler/**",
+    "worker-configuration.d.ts",
   ]),
 ]);
 
